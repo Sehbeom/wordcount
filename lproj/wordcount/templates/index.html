@@ -1,10 +1,39 @@
-<h1>안녕하세요! 여기서 글자를 세세요!</h1>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>글자수 세기</title>
+        <!-- 합쳐지고 최소화된 최신 CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
-<a href="{%url 'about'%}">ABOUT</a>
+        <!-- 부가적인 테마 -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 
-<form action="{% url 'result' %}">
-    {% csrf_token %}
-    <textarea cols="40" rows="10" name="fulltext"></textarea>
-    <br>
-    <input type="submit" value="Count!">
-</form>
+        <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+        <script
+        src="http://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <div class="container">
+        <ul class="nav nav-tabs">
+                <li role="presentation"><a href="/">Home</a></li>
+                <li role="presentation"><a href="{%url 'about'%}">About</a></li>
+        </ul>
+        <h1>글자 수 세기</h1>
+
+
+        <form action="{% url 'result' %}">
+            {% csrf_token %}
+            <textarea cols="40" rows="10" name="fulltext"></textarea>
+            <br>
+            <button type="submit" class="btn btn-success">Count!</button>
+        </form>
+
+        </div>
+    </body>
+
+</html>

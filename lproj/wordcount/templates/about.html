@@ -1,5 +1,31 @@
-<h1>About</h1>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>글자수 세기</title>
+        <!-- 합쳐지고 최소화된 최신 CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
-<p>안녕하세요! 이곳은 글자를 세 주는 멋쟁이 사자처럼의 워드카운트 웹페이지입니다. 여기에서 글자를 세세요.</p>
+        <!-- 부가적인 테마 -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 
-<a href="{% url 'home' %}">Home으로 돌아가기</a>
+        <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+        <script
+        src="http://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <ul class="nav nav-tabs">
+                    <li role="presentation"><a href="/">Home</a></li>
+                    <li role="presentation"><a href="{%url 'about'%}">About</a></li>
+            </ul>
+            <h1>About</h1>
+
+            <p>안녕하세요! 이 페이지는 글자 수를 세어주는 페이지 입니다! 텍스트칸에 세어보고 싶은 글자를 입력하세요!</p>
+        </div>
+    </body>
+</html>
